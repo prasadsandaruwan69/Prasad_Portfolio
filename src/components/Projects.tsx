@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Github, Zap, Globe, Bot, Users, Eye, Server } from 'lucide-react';
-import Cloudcom from '../assets/image/Cloudcom.png';
-import Crm from '../assets/image/Crm.png';
+import Cloudcom from '../assets/image/cloudcom.png';
+import Crm from '../assets/image/crm.png';
 import JobFortal from '../assets/image/jobit.png';
 
 interface ProjectsProps {
