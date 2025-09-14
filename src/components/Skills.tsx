@@ -56,8 +56,8 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
       icon: Brain,
       color: 'from-purple-500 to-pink-400',
       skills: [
-        { name: 'Face Recognition', level: 85, experience: 'Current Project' },
-        { name: 'AI Integration', level: 80, experience: '6+ months' },
+        { name: 'Face Recognition', level: 45, experience: 'Current Project' },
+        { name: 'AI Integration', level: 60, experience: '6+ months' },
         { name: 'PASat API', level: 75, experience: 'Current Project' },
         { name: 'Real-time Processing', level: 78, experience: '6+ months' }
       ]
@@ -76,7 +76,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   ];
 
   const technologies = [
-    'React.js', 'Vue.js', 'Laravel', 'Tailwind CSS', 'Node.js', 'MySQL',
+    'React.js', 'Vue.js', 'Laravel','Next.js','Tailwind CSS', 'Node.js', 'MySQL',
     'JavaScript', 'TypeScript', 'REST APIs', 'Git', 'AI Integration',
     'Face Recognition', 'Real-time Systems', 'Cloud Computing', 'ERP Systems'
   ];

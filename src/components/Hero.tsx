@@ -340,8 +340,8 @@ const Hero = ({ isDarkMode }) => {
         }
 
         .profile-image {
-          width: 220px;
-          height: 220px;
+          width: 380px;
+          height: 480px;
           border-radius: 50%;
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -428,162 +428,188 @@ const Hero = ({ isDarkMode }) => {
       <section
         ref={heroRef}
         id="home"
-        className={`min-h-screen flex items-center justify-center relative overflow-hidden transition-colors duration-500 ${
+        className={`min-h-screen p-10 flex items-center justify-center relative overflow-hidden transition-colors duration-500 ${
           isDarkMode 
             ? 'bg-black text-white' 
             : 'bg-gradient-to-br from-slate-50 to-white text-gray-900'
         }`}
       >
-        <CodingBackground />
+       
         <FloatingCodeElements />
 
-        <div className="container mx-auto px-6 pt-20 text-center relative z-10">
-          {/* Holographic Profile */}
-          <div className="mb-16">
-            <HolographicProfile />
+        <div className="container mx-auto px-6 pt-20 relative z-10">
+          {/* Side by Side Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
+            
+            {/* Left Side - Content */}
+            <div className="space-y-8 lg:pr-8">
+              {/* Greeting */}
+              <div className="space-y-4">
+                <div className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${
+                  isDarkMode ? 'glass-card' : 'glass-card-light'
+                }`}>
+                  <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                  <span className={`text-sm font-mono ${
+                    isDarkMode ? 'text-emerald-400' : 'text-emerald-600'
+                  }`}>
+                    Hello, I'm
+                  </span>
+                </div>
+                
+                <h1 className={`text-5xl lg:text-5xl font-bold leading-tight ${
+                  isDarkMode ? 'text-white' : 'text-gray-900'
+                }`}>
+                  Prasad{' '}
+                  <span className={`bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent animate-text-glow`}>
+                    Sandaruwan
+                  </span>
+                </h1>
+              </div>
 
-            {/* Status indicators */}
-            <div className="flex justify-center mt-6 space-x-4">
-              <div className={`flex items-center space-x-2 px-4 py-2 rounded-full ${
-                isDarkMode ? 'glass-card' : 'glass-card-light'
+              {/* Enhanced Typewriter with terminal styling */}
+              <div className={`px-6 py-4 rounded-xl ${
+                isDarkMode ? 'code-terminal' : 'code-terminal-light'
               }`}>
-                <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-                <span className={`text-sm font-mono ${
+                <div className="flex items-center mb-2">
+                  <div className="flex space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  </div>
+                  <span className={`ml-3 text-xs font-mono ${
+                    isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                  }`}>
+                    role.js
+                  </span>
+                </div>
+                <div className={`font-mono text-lg md:text-xl ${
                   isDarkMode ? 'text-emerald-400' : 'text-emerald-600'
                 }`}>
-                  Online
-                </span>
-              </div>
-              <div className={`flex items-center space-x-2 px-4 py-2 rounded-full ${
-                isDarkMode ? 'glass-card' : 'glass-card-light'
-              }`}>
-                <Code size={16} className={isDarkMode ? 'text-blue-400' : 'text-blue-600'} />
-                <span className={`text-sm font-mono ${
-                  isDarkMode ? 'text-blue-400' : 'text-blue-600'
-                }`}>Coding</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced Typewriter with terminal styling */}
-          <div className="mb-12 flex justify-center">
-            <div className={`px-8 py-6 rounded-2xl max-w-2xl ${
-              isDarkMode ? 'code-terminal' : 'code-terminal-light'
-            }`}>
-              <div className="flex items-center mb-2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className={isDarkMode ? 'text-gray-500' : 'text-gray-700'}>$</span> {displayText}
+                  <span className={`border-r-2 animate-typing-cursor ml-1 ${
+                    isDarkMode ? 'border-emerald-400' : 'border-emerald-600'
+                  }`}></span>
                 </div>
-                <span className={`ml-4 text-xs font-mono ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-600'
+              </div>
+
+              {/* Description */}
+              <p className={`text-lg md:text-sm leading-relaxed ${
+                isDarkMode ? 'text-gray-300' : 'text-gray-700'
+              }`}>
+                I craft digital experiences that blend creativity with functionality. 
+                Passionate about building scalable solutions and exploring the frontiers of AI technology.
+              </p>
+
+              {/* Floating code snippet */}
+              <div className={`p-4 rounded-xl ${
+                isDarkMode 
+                  ? 'glass-card neon-border' 
+                  : 'glass-card-light neon-border-light'
+              }`}>
+                <div className={`font-mono text-sm animate-pulse ${
+                  isDarkMode ? 'text-emerald-300' : 'text-emerald-700'
                 }`}>
-                  terminal.js
-                </span>
-              </div>
-              <div className={`font-mono text-xl md:text-2xl ${
-                isDarkMode ? 'text-emerald-400' : 'text-emerald-600'
-              }`}>
-                <span className={isDarkMode ? 'text-gray-500' : 'text-gray-700'}>$</span> {displayText}
-                <span className={`border-r-2 animate-typing-cursor ml-1 ${
-                  isDarkMode ? 'border-emerald-400' : 'border-emerald-600'
-                }`}></span>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating code snippet */}
-          <div className="mb-16">
-            <div className={`p-6 rounded-2xl max-w-3xl mx-auto ${
-              isDarkMode 
-                ? 'glass-card neon-border' 
-                : 'glass-card-light neon-border-light'
-            }`}>
-              <div className={`font-mono text-left text-sm md:text-base animate-pulse ${
-                isDarkMode ? 'text-emerald-300' : 'text-emerald-700'
-              }`}>
-                <span className={isDarkMode ? 'text-purple-400' : 'text-purple-600'}>
-                  // Currently working on:
-                </span>
-                <br />
-                <span className={isDarkMode ? 'text-blue-400' : 'text-blue-600'}>const</span>{" "}
-                <span className={isDarkMode ? 'text-yellow-300' : 'text-amber-600'}>project</span> ={" "}
-                <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}>
-                  "{codeSnippets[currentCodeIndex]}"
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Next-level contact buttons */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
-            {[
-              {
-                href: "tel:0701251898",
-                icon: Phone,
-                text: "Call",
-                gradient: isDarkMode ? "from-emerald-500 to-teal-600" : "from-emerald-400 to-teal-500",
-                color: "emerald",
-              },
-              {
-                href: "mailto:prasaddiv.contact@gmail.com",
-                icon: Mail,
-                text: "Email",
-                gradient: isDarkMode ? "from-blue-500 to-indigo-600" : "from-blue-400 to-indigo-500",
-                color: "blue",
-              },
-              {
-                href: "https://github.com/prasadsandaruwan69",
-                icon: Github,
-                text: "GitHub",
-                gradient: isDarkMode ? "from-gray-700 to-black" : "from-gray-600 to-gray-800",
-                color: "gray",
-              },
-              {
-                href: "https://linkedin.com/in/prasad-sandaruwan-69b88435b",
-                icon: Linkedin,
-                text: "LinkedIn",
-                gradient: isDarkMode ? "from-blue-600 to-blue-800" : "from-blue-500 to-blue-700",
-                color: "blue",
-              },
-            ].map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  item.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className={`group relative overflow-hidden p-8 rounded-2xl bg-gradient-to-br ${item.gradient} hover-lift transition-all duration-700 transform hover:shadow-2xl ${
-                  isDarkMode 
-                    ? 'glass-card neon-border' 
-                    : 'glass-card-light neon-border-light shadow-lg'
-                }`}
-                style={{
-                  transform: `perspective(1000px) rotateY(${
-                    mousePosition.x * 3
-                  }deg) rotateX(${mousePosition.y * -3}deg)`,
-                }}
-              >
-                <div className="flex flex-col items-center space-y-4 relative z-10">
-                  <div className="p-3 bg-white/10 rounded-full group-hover:scale-125 transition-transform duration-300">
-                    <item.icon size={32} />
-                  </div>
-                  <span className="font-bold text-lg">{item.text}</span>
+                  <span className={isDarkMode ? 'text-purple-400' : 'text-purple-600'}>
+                    // Currently working on:
+                  </span>
+                  <br />
+                  <span className={isDarkMode ? 'text-blue-400' : 'text-blue-600'}>const</span>{" "}
+                  <span className={isDarkMode ? 'text-yellow-300' : 'text-amber-600'}>innovation</span> ={" "}
+                  <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}>
+                    "Building the future"
+                  </span>
                 </div>
+              </div>
 
-                {/* Hover effects */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </a>
-            ))}
+              {/* Contact buttons */}
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  {
+                    href: "tel:0701251898",
+                    icon: Phone,
+                    text: "Call Me",
+                    gradient: isDarkMode ? "from-emerald-500 to-teal-600" : "from-emerald-400 to-teal-500",
+                  },
+                  {
+                    href: "mailto:prasaddiv.contact@gmail.com",
+                    icon: Mail,
+                    text: "Email",
+                    gradient: isDarkMode ? "from-blue-500 to-indigo-600" : "from-blue-400 to-indigo-500",
+                  },
+                  {
+                    href: "https://github.com/prasadsandaruwan69",
+                    icon: Github,
+                    text: "GitHub",
+                    gradient: isDarkMode ? "from-gray-700 to-black" : "from-gray-600 to-gray-800",
+                  },
+                  {
+                    href: "https://linkedin.com/in/prasad-sandaruwan-69b88435b",
+                    icon: Linkedin,
+                    text: "LinkedIn",
+                    gradient: isDarkMode ? "from-blue-600 to-blue-800" : "from-blue-500 to-blue-700",
+                  },
+                ].map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      item.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className={`group relative overflow-hidden p-6 rounded-xl bg-gradient-to-br ${item.gradient} hover-lift transition-all duration-700 transform hover:shadow-2xl ${
+                      isDarkMode 
+                        ? 'glass-card neon-border' 
+                        : 'glass-card-light neon-border-light shadow-lg'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3 relative z-10">
+                      <div className="p-2 bg-white/10 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                        <item.icon size={20} />
+                      </div>
+                      <span className="font-semibold">{item.text}</span>
+                    </div>
+
+                    {/* Hover effects */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Side - Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <HolographicProfile />
+                
+                {/* Status indicators */}
+                <div className="flex justify-center mt-6 space-x-4">
+                  <div className={`flex items-center space-x-2 px-4 py-2 rounded-full ${
+                    isDarkMode ? 'glass-card' : 'glass-card-light'
+                  }`}>
+                    <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span className={`text-sm font-mono ${
+                      isDarkMode ? 'text-emerald-400' : 'text-emerald-600'
+                    }`}>
+                      Available
+                    </span>
+                  </div>
+                  <div className={`flex items-center space-x-2 px-4 py-2 rounded-full ${
+                    isDarkMode ? 'glass-card' : 'glass-card-light'
+                  }`}>
+                    <Code size={16} className={isDarkMode ? 'text-blue-400' : 'text-blue-600'} />
+                    <span className={`text-sm font-mono ${
+                      isDarkMode ? 'text-blue-400' : 'text-blue-600'
+                    }`}>Coding</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Enhanced scroll indicator */}
-          <div className="relative">
+          <div className="flex justify-center mt-16">
             <button
               onClick={scrollToNext}
               className="relative group cursor-pointer transition-all duration-300 transform hover:scale-125"
@@ -602,11 +628,6 @@ const Hero = ({ isDarkMode }) => {
                 />
               </div>
             </button>
-            <p className={`mt-6 text-lg animate-pulse font-mono ${
-              isDarkMode ? 'text-gray-400' : 'text-gray-600'
-            }`}>
-              <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}>&gt;</span> scroll_to_explore()
-            </p>
           </div>
         </div>
 

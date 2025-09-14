@@ -3,6 +3,7 @@ import { ExternalLink, Github, Zap, Globe, Bot, Users, Eye, Server } from 'lucid
 import Cloudcom from '../assets/image/cloudcom.png';
 import Crm from '../assets/image/crm.png';
 import JobFortal from '../assets/image/jobit.png';
+import Nula from '../assets/image/nula.png';
 
 interface ProjectsProps {
   isDarkMode: boolean;
@@ -30,60 +31,108 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   }, []);
 
   const projects = [
-    {
-      title: 'AI Face Recognition System',
-      description: 'Real-time face detection and recognition system integrated with PASat API for advanced facial analysis and identification.',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg',
-      technologies: ['React', 'AI Integration', 'Real-time Processing', 'PASat API'],
-      features: ['Real-time face detection', 'Advanced recognition algorithms', 'API integration', 'Live video processing'],
-      icon: Eye,
-      category: 'AI & Machine Learning'
-    },
-    {
-      title: 'ERP System',
-      description: 'Comprehensive Enterprise Resource Planning system built with modern technologies for efficient business management.',
-      image: Crm,
-      technologies: ['Laravel', 'Vue.js', 'Tailwind CSS', 'MySQL'],
-      features: ['Business process management', 'Real-time analytics', 'Multi-user support', 'Responsive design'],
-      icon: Server,
-      category: 'Web Application'
-    },
-    {
-      title: 'Cloudcom.lk',
-      description: 'Cloud hosting platform providing scalable hosting solutions with advanced management features and user-friendly interface.',
-      image: Cloudcom,
-      technologies: ['Web Development', 'Cloud Technologies', 'cPanel Integration'],
-      features: ['Cloud hosting management', 'Scalable infrastructure', 'User dashboard', 'Automated deployments'],
-      icon: Globe,
-      category: 'Cloud Platform'
-    },
-    {
-      title: 'Job Portal Application',
-      description: 'Comprehensive recruitment platform connecting employers with job seekers through advanced matching algorithms.',
-      image: JobFortal,
-      technologies: ['React', 'Node.js', 'Database Management', 'REST APIs'],
-      features: ['Job matching system', 'Resume builder', 'Application tracking', 'Employer dashboard'],
-      icon: Users,
-      category: 'Web Application'
-    },
-    {
-      title: 'NulaTours.lk',
-      description: 'Tourism booking platform featuring tour packages, hotel reservations, and travel planning tools for Sri Lankan tourism.',
-      image: 'https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg',
-      technologies: ['React', 'Tourism APIs', 'Payment Integration', 'Responsive Design'],
-      features: ['Tour booking system', 'Hotel reservations', 'Travel planning', 'Payment processing'],
-      icon: Globe,
-      category: 'Tourism & Travel'
-    },
-    {
-      title: 'AI Chat Bot',
-      description: 'Intelligent chatbot system with natural language processing capabilities for automated customer service and support.',
-      image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg',
-      technologies: ['AI/ML', 'Natural Language Processing', 'React', 'API Integration'],
-      features: ['Natural language understanding', 'Context awareness', 'Multi-language support', 'Learning capabilities'],
-      icon: Bot,
-      category: 'AI & Machine Learning'
-    }
+{
+    title: 'AI Face Recognition System',
+    description:
+      'Real-time face detection and recognition system integrated with PASat API for advanced facial analysis and identification.',
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg',
+    technologies: ['React', 'AI Integration', 'Real-time Processing', 'PASat API'],
+    features: [
+      'Real-time face detection',
+      'Advanced recognition algorithms',
+      'API integration',
+      'Live video processing',
+    ],
+    icon: Eye,
+    category: 'AI & Machine Learning',
+    liveUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7367791510106439680/', // 🔗 Add your live demo link
+    codeUrl: 'https://github.com/prasadsandaruwan69/Face_Recognation', // 🔗 Add GitHub repo link
+  },
+  {
+    title: 'ERP System',
+    description:
+      'Comprehensive Enterprise Resource Planning system built with modern technologies for efficient business management.',
+    image: Crm,
+    technologies: ['Laravel', 'Vue.js', 'Tailwind CSS', 'MySQL'],
+    features: [
+      'Business process management',
+      'Real-time analytics',
+      'Multi-user support',
+      'Responsive design',
+    ],
+    icon: Server,
+    category: 'Web Application',
+    liveUrl: '',
+    codeUrl: '',
+  },
+  {
+    title: 'Cloudcom.lk',
+    description:
+      'Cloud hosting platform providing scalable hosting solutions with advanced management features and user-friendly interface.',
+    image: Cloudcom,
+    technologies: ['Web Development', 'Cloud Technologies', 'cPanel Integration'],
+    features: [
+      'Cloud hosting management',
+      'Scalable infrastructure',
+      'User dashboard',
+      'Automated deployments',
+    ],
+    icon: Globe,
+    category: 'Cloud Platform',
+    liveUrl: 'https://cloudcom.lk',
+    codeUrl: '',
+  },
+  {
+    title: 'Job Portal Application',
+    description:
+      'Comprehensive recruitment platform connecting employers with job seekers through advanced matching algorithms.',
+    image: JobFortal,
+    technologies: ['React', 'Node.js', 'Database Management', 'REST APIs'],
+    features: [
+      'Job matching system',
+      'Resume builder',
+      'Application tracking',
+      'Employer dashboard',
+    ],
+    icon: Users,
+    category: 'Web Application',
+    liveUrl: '',
+    codeUrl: 'https://github.com/prasadsandaruwan69/Job-Portal-Application',
+  },
+  {
+    title: 'NulaTours.lk',
+    description:
+      'Tourism booking platform featuring tour packages, hotel reservations, and travel planning tools for Sri Lankan tourism.',
+    image: Nula,
+    technologies: ['React', 'Tourism APIs', 'Payment Integration', 'Responsive Design'],
+    features: [
+      'Tour booking system',
+      'Hotel reservations',
+      'Travel planning',
+      'Payment processing',
+    ],
+    icon: Globe,
+    category: 'Tourism & Travel',
+    liveUrl: 'https://nulatours.com',
+    codeUrl: '',
+  },
+  {
+    title: 'AI Chat Bot',
+    description:
+      'Intelligent chatbot system with natural language processing capabilities for automated customer service and support.',
+    image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg',
+    technologies: ['AI/ML', 'Natural Language Processing', 'React', 'API Integration'],
+    features: [
+      'Natural language understanding',
+      'Context awareness',
+      'Multi-language support',
+      'Learning capabilities',
+    ],
+    icon: Bot,
+    category: 'AI & Machine Learning',
+    liveUrl: 'https://your-chatbot-live.com',
+    codeUrl: 'https://github.com/your-chatbot-repo',
+  },
   ];
 
   return (
@@ -182,20 +231,35 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                     </div>
                   </div>
 
-                  <div className="flex gap-4">
-                    <button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105">
-                      <ExternalLink size={16} />
-                      <span className="text-sm">View Live</span>
-                    </button>
-                    <button className={`flex items-center gap-2 ${
-                      isDarkMode 
-                        ? 'bg-gray-700 hover:bg-gray-600 text-white' 
-                        : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
-                    } px-4 py-2 rounded-lg transition-all duration-300`}>
-                      <Github size={16} />
-                      <span className="text-sm">Code</span>
-                    </button>
-                  </div>
+                 <div className="flex gap-4">
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+    >
+      <ExternalLink size={16} />
+      <span className="text-sm">View Live</span>
+    </a>
+  )}
+  {project.codeUrl && (
+    <a
+      href={project.codeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex items-center gap-2 ${
+        isDarkMode
+          ? 'bg-gray-700 hover:bg-gray-600 text-white'
+          : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
+      } px-4 py-2 rounded-lg transition-all duration-300`}
+    >
+      <Github size={16} />
+      <span className="text-sm">Code</span>
+    </a>
+  )}
+</div>
+
                 </div>
               </div>
             ))}
