@@ -7,7 +7,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
-import ChatBot from "./components/Chatbot";
+// import ChatBot from "./components/Chatbot";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 
@@ -80,7 +80,7 @@ function App() {
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
        <div className="fixed bottom-4 right-4 z-50">
-      <ChatBot isDarkMode={isDarkMode} />
+      {/* <ChatBot isDarkMode={isDarkMode} /> */}
     </div>
     </div>
   );
