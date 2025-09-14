@@ -5,29 +5,34 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prasad Sandaruwan - Developer Portfolio</title>
+    <style>
+      #bp-widget {
+        z-index: 9999 !important;
+        bottom: 20px !important;
+        right: 20px !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- React App -->
     <script type="module" src="/src/main.tsx"></script>
-        <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
-  
-<script type="module" src="/src/main.tsx"></script>
-<script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
-<script>
-  // Polling until botpressWebChat is available
-  const waitForBotpress = setInterval(() => {
-    if (window.botpressWebChat) {
-      clearInterval(waitForBotpress);
-      window.botpressWebChat.init({
-        configUrl: "https://files.bpcontent.cloud/2025/09/14/19/20250914193554-AC582XSC.json",
-        botName: "Chatbot",
-        theme: { primary: "#4F46E5" }
-      });
-    }
-  }, 100); // 100ms interval
-</script>
 
-
+    <!-- Botpress Webchat -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+    <script>
+      const waitForBotpress = setInterval(() => {
+        if (window.botpressWebChat) {
+          clearInterval(waitForBotpress);
+          window.botpressWebChat.init({
+configUrl: "https://files.bpcontent.cloud/2025/09/14/19/20250914193554-AC582XSC.json",
+            botName: "Chatbot",
+            theme: { primary: "#4F46E5" }
+          });
+        }
+      }, 100);
+    </script>
 
   </body>
 </html>
